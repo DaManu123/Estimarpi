@@ -58,7 +58,7 @@ public class Estimador implements Runnable{
                 if (Math.abs(dif) < menor){
                     menor = dif;
                     menor_dif = future.get();
-                    System.out.println("Pi:"+menor+" diferencia"+d);
+                    System.out.println("Pi:"+menor+" diferencia: "+d);
                 }
             }
             executor.shutdown();
