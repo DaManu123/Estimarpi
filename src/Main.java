@@ -14,9 +14,11 @@ public class Main {
     public static void main(String[] args) {
 
         Instant inicio = Instant.now();
-        //long n=6600000000L;
+        long n=660000000L;
 //        estimar_pi(n);
-        estimar_pi_paralelo(60000000,8);
+        //estimar_pi_paralelo(60000000,8);
+        Double mpi = Estimador.run_test_futures(n,4,8);
+        System.out.println("Mejor pi:"+mpi);
         Instant fin = Instant.now();
         System.out.println("Tiempo de cálculo: " + Duration.between(inicio, fin));
 
